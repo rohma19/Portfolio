@@ -1,47 +1,59 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: white;
+  background-color: #e09f3e;
+  color: #9e2a2b;
+  font-family: Poppins, sans-serif;
 }
 
-/* Navbar links styling */
-.navbar-nav {
-  background-color: #ffffff;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+p {
+  font-weight: 200;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #9e2a2b;
+}
+
+h1 {
+  text-align: center;
+  color: #9e2a2b;
+}
+
+/* Navigation Styles */
+.nav-el {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 30px;
-  font-size: 16px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 50px 100px 0;
+  gap: 40px;
 }
 
-/* Navbar links hover effect */
+header {
+  background-color: #fff3b0;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
 .navbar-nav a:hover {
   text-decoration: none;
   color: #333333;
   transition: color 0.3s ease;
 }
 
-/*Display background color black on navbar scroll*/
 .navbar-scroll.navbar-dark {
   background-color: black;
 }
 
-/* hero background image */
+/* Hero Section Styles */
 .bgimage {
   height: 100vh;
   background: url("../public/banner.jpeg");
   background-size: cover;
   position: relative;
-}
-
-/* text css above hero image */
-.hero_title {
-  font-size: 4.5rem;
-}
-
-.hero_desc {
-  font-size: 2rem;
 }
 
 .hero-text {
@@ -50,45 +62,187 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #bf3131;
+  color: #e09f3e;
 }
 
-/* about section image css */
-.imageAboutPage {
+.hero_title {
+  font-size: 4.5rem;
+}
+
+.hero_desc {
+  font-size: 2rem;
+}
+
+/* About Section Styles */
+#about {
+  background-color: #e09f3e;
+  padding: 80px 0;
+}
+
+.image-about-page {
   width: 25%;
+  border-radius: 10px;
 }
 
-/* Services Section */
+#about h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #343a40;
+}
+
+#about .col-lg-4 p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555555;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+#about p {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555555;
+}
+
+#about ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#about li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #9e2a2b;
+}
+
+#about .row {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  #about .col-lg-4,
+  #about .col-md-6 {
+    margin-bottom: 20px;
+  }
+}
+
+#about .intro-text {
+  font-size: 1.2rem;
+}
+
+#about .personal-info {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Services Section Styles */
+/* Specific Styles for Services Section */
+
 #services {
-  padding: 80px 0; /* Adjust the padding as needed */
+  padding: 80px 0;
+  margin: 20px;
 }
 
-/* Services Cards */
-.card.servicesText {
-  height: 400px; /* Adjust the height as needed */
+.services-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 300px;
+}
+
+.card:hover .services-icon {
+  color: #008000;
+  border: 1px solid #c64da0;
+  padding: 5px;
 }
 
 .card-title {
-  height: 280px;
+  height: 150px;
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #cccccc;
+}
+
+.services-icon {
+  color: #335c67;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Optional: Remove unnecessary class names */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 300px;
+}
+
+.card:hover .services-icon {
+  color: #008000;
+  border: 1px solid #c64da0;
+  padding: 5px;
+}
+
+.card-title {
+  height: 150px;
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #fff3b0;
+}
+
+.services-icon {
+  color: #9e2a2b;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Optional: Remove unnecessary class names */
+.social-icons {
+  font-size: 36px;
   cursor: pointer;
 }
 
-.servicesIcon {
-  font-size: 36px;
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-linkedin:hover,
+.fa-twitch:hover {
+  color: #9e2a2b;
+}
+
+.fab {
+  color: #000000;
+}
+
+#footer {
+  background-color: #fff3b0;
   text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
-  /* Add margin between the icon and title */
-}
-
-.card-title {
-  text-align: center;
-}
-
-.card:hover .servicesIcon {
-  color: #008000;
-}
-
-.servicesText:hover {
-  border: 1px solid #008000;
 }
