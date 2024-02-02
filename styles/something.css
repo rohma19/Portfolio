@@ -1,7 +1,8 @@
 /* Reset and Global Styles */
 * {
-  margin: 20;
-  padding: 20;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,26 +24,28 @@ h1 {
 }
 
 /* Navigation Styles */
+
+header {
+  width: 80%;
+  margin: auto;
+}
+
 .nav-el {
+  height: 4rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  letter-spacing: 2px;
-  padding: 50px 100px 0;
-  gap: 40px;
 }
 
 .list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 5px;
 }
 
-header {
-  background-color: #fff3b0;
-  display: flex;
-  justify-content: end;
-  width: 100%;
+.list li {
+  list-style: none;
+  margin: 10px;
 }
 
 .navbar-nav a:hover {
@@ -82,9 +85,8 @@ header {
 /* About Section Styles */
 #about {
   background-color: papayawhip;
-  padding: 80px 20;
-  text-align: center;
   padding: 80px 0;
+  text-align: center;
   margin: 20px;
 }
 
@@ -92,35 +94,25 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1200px; /* Adjust the max-width as needed */
-  margin: 0 auto; /* Center the container */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .container-about {
-  padding: 20px; /* Add padding to the container */
+  padding: 20px;
 }
 
 strong {
   text-align: center;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .image-about-page {
   border-radius: 10px;
   float: left;
-  max-width: 100%; /* Make sure the image is responsive */
-  margin-bottom: 10px; /* Add some spacing between the image and text */
-}
-
-.bio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px; /* Add spacing below the bio */
-}
-
-.bio p {
-  text-align: center;
+  max-width: 100%;
+  margin-bottom: 10px;
 }
 
 #h1 {
@@ -134,19 +126,14 @@ strong {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #555555;
-  margin-bottom: 15px; /* Add spacing below paragraphs */
-}
-
-strong {
-  display: block; /* Ensure each strong element is on a new line */
-  margin-bottom: 10px; /* Add spacing below each strong element */
+  margin-bottom: 15px;
 }
 
 #about .col-lg-4 p {
   font-size: 1.1rem;
   line-height: 1.6;
   color: #555;
-  margin-top: 10px; /* Adjust as needed */
+  margin-top: 10px;
 }
 
 #about ul {
@@ -180,6 +167,49 @@ strong {
   color: #007bff;
 }
 
+/* More About Section Styles */
+.more-about {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
+.skills {
+  max-width: 68.75rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
 /* Services Section Styles */
 /* Specific Styles for Services Section */
 
@@ -249,7 +279,7 @@ strong {
 }
 
 .card-title {
-  height: 150px;
+  height: 40px;
   font-size: 20px;
   padding: 2px;
   cursor: pointer;
