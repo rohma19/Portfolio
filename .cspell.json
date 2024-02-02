@@ -1,20 +1,22 @@
 {
   "language": "en",
   "words": [
-    "HackYourFutureBelgium",
-    "HackYourFuture",
-    "Nepo",
-    "Ponomarev",
-    "Lant",
-    "Yodiz",
-    "Zepel",
-    "Excalidraw",
-    "Wireframes",
     "Bilde",
     "Christiaan",
-    "Verwijs",
+    "Enggardini",
+    "Excalidraw",
+    "HackYourFuture",
+    "HackYourFutureBelgium",
+    "Lant",
+    "Nepo",
+    "Ponomarev",
+    "Rohma",
     "Todos",
-    "wireframe"
+    "Verwijs",
+    "wireframe",
+    "Wireframes",
+    "Yodiz",
+    "Zepel"
   ],
   "ignorePaths": [
     "node_modules/**",
