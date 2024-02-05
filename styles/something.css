@@ -1,3 +1,5 @@
+/* stylelint-disable media-feature-range-notation */
+/* stylelint-disable-next-line comment-empty-line-before */
 /* Reset and Global Styles */
 * {
   margin: 0;
@@ -25,9 +27,8 @@ h1 {
 
 /* Navigation Styles */
 
-header {
-  width: 80%;
-  margin: auto;
+a {
+  text-decoration: none;
 }
 
 .nav-el {
@@ -41,6 +42,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f9f7c9;
 }
 
 .list li {
@@ -57,10 +59,19 @@ header {
   background-color: black;
 }
 
+.li a:hover {
+  background-color: #111;
+}
+
+.ul .list {
+  display: inline;
+  background-color: #9e2a2b;
+}
+
 /* Hero Section Styles */
 .bgimage {
   height: 100vh;
-  background: url("../public/banner.jpeg");
+  background: url("../public/banner1.jpg");
   background-size: cover;
   position: relative;
 }
@@ -74,12 +85,14 @@ header {
   color: #e09f3e;
 }
 
-.hero-title {
-  font-size: 4.5rem;
+.hero-desc {
+  position: absolute;
+  color: whitesmoke;
+  font-size: 2rem;
 }
 
-.hero-desc {
-  font-size: 2rem;
+.hero-title {
+  font-size: 4.5rem;
 }
 
 /* About Section Styles */
@@ -91,11 +104,12 @@ header {
 }
 
 .about-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-direction: row;
 }
 
 .container-about {
@@ -121,11 +135,16 @@ strong {
   color: #343a40;
 }
 
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
 #about p {
   text-align: justify;
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #555555;
+  color: #555;
   margin-bottom: 15px;
 }
 
@@ -151,13 +170,6 @@ strong {
   margin-top: 20px;
 }
 
-@media (max-width: 767px) {
-  #about .col-lg-4,
-  #about .col-md-6 {
-    margin-bottom: 20px;
-  }
-}
-
 #about .intro-text {
   font-size: 1.2rem;
 }
@@ -168,6 +180,7 @@ strong {
 }
 
 /* More About Section Styles */
+
 .more-about {
   background-color: var(--bg-color);
   padding: 1rem 6rem;
@@ -176,11 +189,6 @@ strong {
 .more-about h2 {
   margin-bottom: var(--bottom-margin);
   text-align: center;
-}
-
-.more-about p {
-  line-height: var(--line-height);
-  padding: 0.4rem;
 }
 
 .skills {
@@ -210,8 +218,8 @@ strong {
   padding: 20px;
   margin: 10px;
 }
+
 /* Services Section Styles */
-/* Specific Styles for Services Section */
 
 #services {
   padding: 80px 0;
@@ -233,48 +241,17 @@ strong {
   height: 300px;
 }
 
-.card:hover .services-icon {
-  color: #008000;
-  border: 1px solid #c64da0;
-  padding: 5px;
-}
-
-.card-title {
-  height: 150px;
-  font-size: 20px;
-  padding: 2px;
-  cursor: pointer;
-  text-align: center;
-  background-color: #cccccc;
-}
-
 .services-icon {
-  color: #335c67;
+  color: #9e2a2b;
   font-size: 36px;
   margin-bottom: 20px;
   text-align: center;
   width: 100%;
 }
 
-.text-center {
-  text-align: center;
-}
-
-/* Optional: Remove unnecessary class names */
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  height: 300px;
-}
-
 .card:hover .services-icon {
-  color: #008000;
-  border: 1px solid #c64da0;
+  color: #f28585;
+  border: 1px solid #9e2a2b;
   padding: 5px;
 }
 
@@ -287,16 +264,16 @@ strong {
   background-color: #fff3b0;
 }
 
-.services-icon {
-  color: #9e2a2b;
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-align: center;
-  width: 100%;
-}
-
 .text-center {
   text-align: center;
+}
+
+/* Optional: Remove unnecessary class names */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Optional: Remove unnecessary class names */
@@ -314,10 +291,61 @@ strong {
 }
 
 .fab {
-  color: #000000;
+  color: #9e2a2b;
 }
 
 #id-footer {
   background-color: #fff3b0;
   text-align: center;
+}
+
+/* =========== Desktop first ======== */
+
+/* 4K screen */
+@media (max-width: 2560px) {
+  .showcase {
+    width: 100%;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1440px) {
+  .showcase {
+    width: 90%;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .showcase {
+    width: 80%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .showcase {
+    width: 70%;
+  }
+}
+
+/* Mobile L */
+@media (max-width: 425px) {
+  .showcase {
+    width: 65%;
+  }
+}
+
+/* Mobile M */
+@media (max-width: 375px) {
+  .showcase {
+    width: 60%;
+  }
+}
+
+/* Mobile S */
+@media (max-width: 320px) {
+  .showcase {
+    width: 50%;
+  }
 }
